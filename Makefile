@@ -7,3 +7,7 @@ image:
 .PHONY: push
 push:
 	docker push $(IMAGE)
+
+.PHONY: buildx
+buildx:
+	docker buildx build . -t $(IMAGE)
